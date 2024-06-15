@@ -19,11 +19,9 @@ function App() {
 
     const response = await fetch("https://api.github.com/users/" + username);
     const data = await response.json();
-    console.log(data)
 
     const responseRepo = await fetch("https://api.github.com/users/" + username + "/repos");
     const repo = await responseRepo.json();
-    console.log(repo)
 
     setuserData(data)
     setRepositories(repo)

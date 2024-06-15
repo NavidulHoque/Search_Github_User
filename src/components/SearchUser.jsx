@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react"
 
-const SearchUser = ({fetchUserData, setloading, loading}) => {
+const SearchUser = ({fetchUserData, setloading}) => {
 
   const [username, setusername] = useState('')
 
@@ -10,7 +10,7 @@ const SearchUser = ({fetchUserData, setloading, loading}) => {
 
     e.preventDefault()
     setloading(true)
-    setusername('')
+    setusername("")
     fetchUserData(username)
     
   }
